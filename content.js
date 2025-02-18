@@ -15,7 +15,7 @@ chrome.storage.sync.get(['disablePhishingLinks'], function (result) {
 function checkIfPhishing(url, linkElement, disablePhishingLinks) {
     const cleanUrl = new URL(url).origin; // Normalize the URL
 
-    fetch('http://192.168.0.133:5000/predict', {
+    fetch('http://<server-address>:5000/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
