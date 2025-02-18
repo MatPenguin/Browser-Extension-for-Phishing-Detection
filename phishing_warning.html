@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Warning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .phishing-url {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Phishing Warning</h1>
+    <p>The URL you tried to access is identified as a phishing link:</p>
+    <p class="phishing-url" id="phishing-url"></p>
+    <p>Please avoid clicking this link for your safety.</p>
+</body>
+<script>
+    // Get the URL from the query parameters
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get('url');
+    document.getElementById('phishing-url').textContent = url;
+</script>
+</html>

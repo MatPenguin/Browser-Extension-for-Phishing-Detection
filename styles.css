@@ -1,0 +1,19 @@
+.highlight-link {
+  /* Default styling for all links */
+  text-decoration: underline;
+}
+
+.phishing-link {
+  color: red; /* Highlight phishing links in red */
+}
+
+.phishing-tooltip {
+  position: absolute;
+  background-color: #ffcc00;
+  color: black;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 1000;
+  pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+}
